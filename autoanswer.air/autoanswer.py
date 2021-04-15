@@ -29,7 +29,7 @@ lisAs=[['01','03'],['02','04','09'],['05'],['06'],['07'],['08']] #09及以上题
 slidexy=-0.74000    #滑动距离
 
 for i in namelist:
-    if i  in ['07']:    #部分不支持的类型不作答
+    if i  not in ['08']:    #部分不支持的类型不作答
         listype=i
         answer_mode='text'
         if listype in lisAs[0]: #相识度判断
