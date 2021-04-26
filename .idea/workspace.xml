@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9682bac1-a13a-4294-bf55-08fb64f8a7cd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wordtest/allocation.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wordtest/wordtest_issue.py" afterPath="$PROJECT_DIR$/wordtest/wordtest_issue.py" />
     </list>
     <ignored path="WordtestEnissue.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +28,27 @@
       <file leaf-file-name="wordtest_issue.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wordtest/wordtest_issue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6706282">
-              <caret line="140" column="37" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
+            <state vertical-scroll-proportion="3.7928221">
+              <caret line="143" column="27" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
+              <folding>
+                <element signature="e#23#60#0" expanded="true" />
+                <element signature="e#53077#53081#0" expanded="false" />
+                <element signature="e#53116#53120#0" expanded="false" />
+                <element signature="e#53163#53941#0" expanded="false" />
+                <element signature="e#53999#54120#0" expanded="false" />
+                <element signature="e#54172#54706#0" expanded="false" />
+                <element signature="e#54748#54950#0" expanded="false" />
+                <element signature="e#55003#55075#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allocation.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordtest/allocation.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -44,6 +65,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wordtest/allocation.yaml" />
+        <option value="$PROJECT_DIR$/wordtest/wordtest_issue.py" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -113,6 +142,11 @@
         </subPane>
       </pane>
     </panes>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\test010\Documents\GitHub\WordtestEnissue\wordtest" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.wordtest_issue">
     <configuration default="false" name="wordtest_issue" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -285,7 +319,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3035522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -311,11 +345,30 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/wordtest/wordtest_issue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
+            <element signature="e#53077#53081#0" expanded="false" />
+            <element signature="e#53116#53120#0" expanded="false" />
+            <element signature="e#53163#53941#0" expanded="false" />
+            <element signature="e#53999#54120#0" expanded="false" />
+            <element signature="e#54172#54706#0" expanded="false" />
+            <element signature="e#54748#54950#0" expanded="false" />
+            <element signature="e#55003#55075#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordtest/allocation.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -325,9 +378,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wordtest/wordtest_issue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6706282">
-          <caret line="140" column="37" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
+            <element signature="e#53077#53081#0" expanded="false" />
+            <element signature="e#53116#53120#0" expanded="false" />
+            <element signature="e#53163#53941#0" expanded="false" />
+            <element signature="e#53999#54120#0" expanded="false" />
+            <element signature="e#54172#54706#0" expanded="false" />
+            <element signature="e#54748#54950#0" expanded="false" />
+            <element signature="e#55003#55075#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordtest/wordtest_issue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
+            <element signature="e#53077#53081#0" expanded="false" />
+            <element signature="e#53116#53120#0" expanded="false" />
+            <element signature="e#53163#53941#0" expanded="false" />
+            <element signature="e#53999#54120#0" expanded="false" />
+            <element signature="e#54172#54706#0" expanded="false" />
+            <element signature="e#54748#54950#0" expanded="false" />
+            <element signature="e#55003#55075#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordtest/allocation.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordtest/wordtest_issue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.7928221">
+          <caret line="143" column="27" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
+            <element signature="e#53077#53081#0" expanded="false" />
+            <element signature="e#53116#53120#0" expanded="false" />
+            <element signature="e#53163#53941#0" expanded="false" />
+            <element signature="e#53999#54120#0" expanded="false" />
+            <element signature="e#54172#54706#0" expanded="false" />
+            <element signature="e#54748#54950#0" expanded="false" />
+            <element signature="e#55003#55075#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

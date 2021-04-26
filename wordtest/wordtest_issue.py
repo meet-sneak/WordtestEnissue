@@ -1,15 +1,20 @@
 # -*- coding:utf-8 -*-
-import requests,datetime,json
+import requests,datetime,json,yaml,os
 from playsound import playsound
 
-node='test' #环境：test为测试，formal为正式
-course_id='5fe98d041a5ca944991fb6a0' #课程：5ff098a7d4daa364c3186d7f 为默认正式环境课程;测试、5fe98d041a5ca944991fb6a0
+file_name='allocation.yaml'
+yaml_Path = os.path.dirname(os.path.realpath(__file__))
+with open(yaml_Path+'/../wordtest/'+file_name, 'rb') as f:
+    temp = yaml.load(f.read(),Loader=yaml.FullLoader)
+temp=temp['environment']    #配置文件数据
+
+course_id=temp['course_id'] #课程id
 today = datetime.date.today() #作答时间段
 yesterday = today + datetime.timedelta(days=-1)
 
-account={'test':{"email":"18588673869","password":"admin@123"},'formal':{"email":"13316170629","password":"alex.0325"}}
+user_data={"email":str(temp['user']),"password":temp['password']}
 
-environment={'test':'https://test.api.07future.com','formal':'https://api.07future.com'}
+api_address=temp['api_address']
 
 data01 = {"excellentGrade":5,"type":"wordTest","startTime":"{}T16:00:00.000Z".format(yesterday),"endTime":"{}T15:00:00.000Z".format(today),"duration":900000,"name":"{0}.{1}---测试看英写中".format(today.month,today.day),"randomOptions":False,"randomQuestions":False,"course_id":["{}".format(course_id)],"maxGrade":35,"wordList":["surfeit","surreptitious","surrogate","tactless","tangential","temerity","tendentious","tirade","torpor","transgression","traverse","trepidation","trifling","tumultuous","turpitude","unassailable","unseemly","urbane","usurp","veracity","verisimilar","vicissitude","vilify","vintage","virtuoso","voluminous","voracious","wanton","warranted","wary","whereas","whet","wily","writhe","zany"],"content":[{"contentType":"10","contentText":"surfeit","answerKey":"过量、过度（尤指饮食）、（饮食过度引起的）不适","word":"surfeit"},{"contentType":"10","contentText":"surreptitious","answerKey":"鬼鬼崇祟的、私下的、秘密的","word":"surreptitious"},{"contentType":"10","contentText":"surrogate","answerKey":"代理、代表、代用品、代替、代孕者、代用人物、遗嘱检验法庭、代理的","word":"surrogate"},{"contentType":"10","contentText":"tactless","answerKey":"不得体的、不圆通的、粗鲁的、不替别人着想的","word":"tactless"},{"contentType":"10","contentText":"tangential","answerKey":"间接相关的、次要的、外围的、略为触及题目的","word":"tangential"},{"contentType":"10","contentText":"temerity","answerKey":"鲁莽、冒失","word":"temerity"},{"contentType":"10","contentText":"tendentious","answerKey":"有偏见的、（指演说、文章等）宣传性的、淘气的、倔强的","word":"tendentious"},{"contentType":"10","contentText":"tirade","answerKey":"激烈的长篇指责或演说","word":"tirade"},{"contentType":"10","contentText":"torpor","answerKey":"麻木、迟钝、麻痹、（动物的）冬眠","word":"torpor"},{"contentType":"10","contentText":"transgression","answerKey":"违反、违法、罪过","word":"transgression"},{"contentType":"10","contentText":"traverse","answerKey":"横越、横贯、通过","word":"traverse"},{"contentType":"10","contentText":"trepidation","answerKey":"颤抖、害怕、不安、震颤","word":"trepidation"},{"contentType":"10","contentText":"trifling","answerKey":"微不足道的、轻浮的、无聊的、懒散的","word":"trifling"},{"contentType":"10","contentText":"tumultuous","answerKey":"骚乱的、吵闹的、狂暴的、激烈的","word":"tumultuous"},{"contentType":"10","contentText":"turpitude","answerKey":"邪恶、恶劣、堕落","word":"turpitude"},{"contentType":"10","contentText":"unassailable","answerKey":"攻不破的","word":"unassailable"},{"contentType":"10","contentText":"unseemly","answerKey":"（举止）不得体的、不合时宜的、易遣非议的","word":"unseemly"},{"contentType":"10","contentText":"urbane","answerKey":"都市化的、彬彬有礼的、温文尔雅的","word":"urbane"},{"contentType":"10","contentText":"usurp","answerKey":"篡夺、盗用、侵占、霸占、夺取、强夺","word":"usurp"},{"contentType":"10","contentText":"veracity","answerKey":"诚实、真实","word":"veracity"},{"contentType":"10","contentText":"verisimilar","answerKey":"好像真实的","word":"verisimilar"},{"contentType":"10","contentText":"vicissitude","answerKey":"变迁兴衰","word":"vicissitude"},{"contentType":"10","contentText":"vilify","answerKey":"中伤、诽谤","word":"vilify"},{"contentType":"10","contentText":"vintage","answerKey":"美酒、葡萄产量、酒产年、酒产地、制造年份","word":"vintage"},{"contentType":"10","contentText":"virtuoso","answerKey":"艺术大师、演奏能手、名家、艺术名家、学者、古董收藏家","word":"virtuoso"},{"contentType":"10","contentText":"voluminous","answerKey":"大的、多卷的、著作多的、宽松的","word":"voluminous"},{"contentType":"10","contentText":"voracious","answerKey":"贪婪的、如饥似渴的、贪吃的、渴求的","word":"voracious"},{"contentType":"10","contentText":"wanton","answerKey":"荒唐的、繁茂的、变化无常的、行为不检的","word":"wanton"},{"contentType":"10","contentText":"warranted","answerKey":"（制造商）担保的、保证的","word":"warranted"},{"contentType":"10","contentText":"wary","answerKey":"谨慎的、小心翼翼的、警戒的、警惕的","word":"wary"},{"contentType":"10","contentText":"whereas","answerKey":"然而、鉴于、反之","word":"whereas"},{"contentType":"10","contentText":"whet","answerKey":"（在石头上）磨（刀、斧等）、引起、刺激（食欲、欲望、兴趣等）","word":"whet"},{"contentType":"10","contentText":"wily","answerKey":"狡诈的、狡猾的、足智多谋的、诡计多端的","word":"wily"},{"contentType":"10","contentText":"writhe","answerKey":"（因极度痛苦而）扭动或翻滚、痛苦、苦恼、蠕动、蜿蜒移动","word":"writhe"},{"contentType":"10","contentText":"zany","answerKey":"滑稽的、荒唐的、笨的、可笑的","word":"zany"}],"wordCount":35,"school":"gw","year":2021,"isFirst":True,"autoReset":True,"checkResult":True,"resetDeadline":"{}T16:00:00.000Z".format(today),"resetMaxTimes":12,"resetGrade":17,"resetDelay":0}
 
@@ -31,23 +36,13 @@ data09 = {"excellentGrade":5,"type":"wordTest","startTime":"{}T16:00:00.000Z".fo
 
 list100={'01':data01,'02':data02,'03':data03,'04':data04,'05':data05,'06':data06,'07':data07,'08':data08,'09':data09}
 
-if node == 'test':
-    login_url = '{}/api/auth'.format(environment['test'])
-    word_url = '{}/api/quiz/assessment/wordTest'.format(environment['test'])
-    delword_url='{}/api/quiz/'.format(environment['test'])
-    putword_url = '{}/api/quiz/getConentAllSection/match'.format(environment['test'])
-    user = account['test']
-elif node == 'formal':
-    login_url = '{}/api/auth'.format(environment['formal'])
-    word_url = '{}/api/quiz/assessment/wordTest'.format(environment['formal'])
-    delword_url = '{}/api/quiz/'.format(environment['formal'])
-    putword_url = '{}/api/quiz/getConentAllSection/match'.format(environment['formal'])
-    user = account['formal']
+if api_address:
+    login_url = '{}/api/auth'.format(api_address)
+    word_url = '{}/api/quiz/assessment/wordTest'.format(api_address)
+    delword_url='{}/api/quiz/'.format(api_address)
+    putword_url = '{}/api/quiz/getConentAllSection/match'.format(api_address)
+    get_exam = '{}/api/quiz/quizListAdmin2'.format(api_address)
 else:
-    word_url = ''
-    delword_url=''
-    login_url = ''
-    user = ''
     print('url环境配置错误')
 
 
@@ -71,10 +66,10 @@ class Loin():
     def __init__(self):
         pass
 
-    def login(self):
+    def login(self,user_data=user_data):
 
         session = requests.session()
-        resing = session.request('POST',login_url,headers=headers,json=user)
+        resing = session.request('POST',login_url,headers=headers,json=user_data)
         print(resing.text)
 
         return session
@@ -140,15 +135,17 @@ class wordTest():
                 mp3list[i] = 'D:/FFOutput/125.mp3'
                 playsound(mp3list[i])
                 print('播放完毕',mp3list[i])
+    def get_exam(self,session,school='gw'):
+        res = session.request('POST',get_exam,date=school)
+        res = print()
 
 if __name__ == '__main__':
 
      session=Loin().login()
-     tecs=wordTest().wordtest(session)
+     #tecs=wordTest().wordtest(session)
      # #删除小测
-     #
-     tecs={'01': {'_id': '6075cfdd1338a468a225fcc3'}, '02': {'_id': '6075cfde1338a468a225fcd6'}, '03': {'_id': '6075cfde1338a468a225fce9'}, '04': {'_id': '6075cfdf1338a468a225fcfc'}, '05': {'_id': '6075cfe01338a468a225fd0f'}, '06': {'_id': '6075cfe11338a468a225fd22'}, '07': {'_id': '6075cfe21338a468a225fd35'}, '08': {'_id': '6075cfe31338a468a225fd48'}, '09': {'_id': '6075cfe31338a468a225fd5b'}}
-     cs=wordTest().delete_wordtest(session,tecs)
+     # tecs={'01': {'_id': '60863078c8063b6840f31a4c'}, '02': {'_id': '60863079c8063b6840f31a5f'}, '03': {'_id': '6086307ac8063b6840f31a72'}, '04': {'_id': '6086307bc8063b6840f31a85'}, '05': {'_id': '6086307bc8063b6840f31a98'}, '06': {'_id': '6086307cc8063b6840f31aab'}, '07': {'_id': '6086307dc8063b6840f31abe'}, '08': {'_id': '6086307ec8063b6840f31ad1'}, '09': {'_id': '6086307fc8063b6840f31ae4'}}
+     # cs=wordTest().delete_wordtest(session,tecs)
 
      # wordid='606f2375c8ca3d32621ef281' #获取单词跟读链接
      # cc=wordTest().put_wordtest(session,wordid)
