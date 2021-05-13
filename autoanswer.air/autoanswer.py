@@ -6,6 +6,11 @@ from airtest.core.api import *
 auto_setup(__file__)
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
+
+lins="此次系统更新添加了以下问题：一、系统新增校刊功能，学生及校刊管理员可以发布及管理校刊。二、校刊支持文章、新闻、视频等常见信息载体形式。三、其他功能体验优化"
+text(lins)
+
+
 #开始-------------------------------------------------
 #SAT核心词汇 1600，List55-Tough P219-223
 today = datetime.date.today() #今天日期
