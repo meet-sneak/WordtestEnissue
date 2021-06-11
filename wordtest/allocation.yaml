@@ -1,6 +1,6 @@
 environment:
   api_address:  https://test.api.07future.com #环境：有test为测试
-  user: 18588673869 #测试环境账号
+  user: 16521686454 #测试环境账号
   password:  admin@123
   course_id:  5fe98d041a5ca944991fb6a0 #课程：5ff098a7d4daa364c3186d7f 为默认正式环境课程;测试、5fe98d041a5ca944991fb6a0
 
